@@ -6,9 +6,12 @@ import helmet from 'helmet'
 import Template from './../template'
 import userRoutes from './routes/user.routes'
 import authRoutes from './routes/auth.routes'
+import path from 'path'
+import devBundle from './devBundle' //Закомментировать для продакшена
 
 const app = express()
-
+devBundle.compile(app) // Закомментировать для продакшена
+const CURRENT_WORKING_DIR = process.cwd()
 app.get('/', (req, res) => {
     res.status(200).send(Template())
 })
@@ -29,5 +32,6 @@ app.use((err, req, res, next) => {
         console.log(err)
     }
 })
+app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')))
 
 export default app
