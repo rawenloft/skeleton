@@ -7,7 +7,8 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar'
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
 import { Avatar, IconButton, ListItemText, Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom'
-import { ArrowForward } from '@material-ui/icons'
+import { ArrowForward, Person } from '@material-ui/icons'
+import {list} from './api-user'
  
 const useStyles = makeStyles(theme => ({
     root: theme.mixins.gutters({
@@ -29,7 +30,7 @@ export default function Users() {
         const abortController = new AbortController()
         const signal = abortController.signal
 
-        List(signal).then((data) => {
+        list(signal).then((data) => {
             if (data && data.error) {
                 console.log(data.error)
             } else {
@@ -47,12 +48,12 @@ export default function Users() {
                 All Users
             </Typography>
             <List dense>
-                {user.map((item) => {
+                {users.map((item, i) => {
                     return <Link to={"/user/" + item._id} key={i}>
                         <ListItem button>
                             <ListItemAvatar>
                                 <Avatar>
-                                    <Person />
+                                    <Person/>
                                 </Avatar>
                             </ListItemAvatar>
                             <ListItemText primary={item.name} />
@@ -63,8 +64,8 @@ export default function Users() {
                             </ListItemSecondaryAction>
                         </ListItem>
                     </Link>
-                })
-            }
+                    })
+                }
             </List>
         </Paper>
     )
