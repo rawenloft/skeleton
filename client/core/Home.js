@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import unicornBikeImg from './../assets/images/unicornBike.jpg'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
     card: {
@@ -36,7 +37,9 @@ export default function Home() {
                             component="p">
                     Welcome to MERN Skeleton home page.
                 </Typography>
+                <Link to="/signup">Sign Up</Link>
             </CardContent>
+            <Link to="/users">Users</Link>
         </Card>
     )
 }
