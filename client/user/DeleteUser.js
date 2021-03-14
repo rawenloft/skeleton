@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import auth from './../auth/auth-helper'
 import { remove } from './api-user'
 import { Redirect } from 'react-router-dom'
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core'
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton } from '@material-ui/core'
 import Delete from '@material-ui/icons/Delete'
 
 export default function DeleteUser(props) {

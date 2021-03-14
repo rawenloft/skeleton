@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import {signin} from './api-auth'
+import { Redirect } from 'react-router-dom'
 import auth from './auth-helper'
-import { Button, Card, CardActions, CardContent, Icon, makeStyles, TextField, Typography } from '@material-ui/core'
+import {makeStyles} from '@material-ui/core/styles'
+import { Button, Card, CardActions, CardContent, Icon, TextField, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
     card:{

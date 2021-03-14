@@ -38,7 +38,7 @@ export default function Users() {
             }
         })
         return function cleanup() {
-            AbortController.abort()
+            abortController.abort()
         }
     }, [])
 
