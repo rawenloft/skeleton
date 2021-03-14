@@ -5,7 +5,7 @@ import { Button, Card, CardActions, CardContent, Dialog, DialogTitle, DialogActi
 import { Link } from 'react-router-dom'
 
 
-const useStyles =makeStyles(theme => ({
+const useStyles = makeStyles(theme => ({
     card:{
         maxWidth: 600,
         margin: 'auto',

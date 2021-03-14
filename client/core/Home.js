@@ -40,6 +40,7 @@ export default function Home() {
                 <Link to="/signup">Sign Up</Link>
             </CardContent>
             <Link to="/users">Users</Link>
+            <Link to="/signin">Sign In</Link>
         </Card>
     )
 }
