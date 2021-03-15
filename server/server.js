@@ -16,5 +16,5 @@ mongoose.connect(config.mongoUri, {
     useUnifiedTopology: true
 })
 mongoose.connection.on('error', () => {
-    throw new Error(`Unable to connect to database: ${mongoUri}`)
+    throw new Error(`Unable to connect to database: ${config.mongoUri}`)
 })

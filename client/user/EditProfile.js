@@ -3,8 +3,13 @@ import auth from './../auth/auth-helper'
 import { makeStyles } from '@material-ui/core/styles'
 import { read, update } from './api-user'
 import { Redirect } from 'react-router-dom'
-import { Button, Card, CardActions, CardContent, Icon, TextField, Typography } from '@material-ui/core'
-
+import Button from '@material-ui/core/Button'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import Icon from '@material-ui/core/Icon'
+import TextField from '@material-ui/core/TextField'
+import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles(theme => ({
     card:{

@@ -5,9 +5,13 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemAvatar from '@material-ui/core/ListItemAvatar'
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
-import { Avatar, IconButton, ListItemText, Typography } from '@material-ui/core'
+import Avatar from '@material-ui/core/Avatar'
+import IconButton from '@material-ui/core/IconButton'
+import ListItemText from '@material-ui/core/ListItemText'
+import Typography from '@material-ui/core/Typography'
+import ArrowForward from '@material-ui/icons/ArrowForward'
+import Person from "@material-ui/icons/Person"
 import { Link } from 'react-router-dom'
-import { ArrowForward, Person } from '@material-ui/icons'
 import {list} from './api-user'
  
 const useStyles = makeStyles(theme => ({
